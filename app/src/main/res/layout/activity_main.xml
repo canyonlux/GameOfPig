@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <!-- Jugador 1 -->
+
+    <!-- Jugador 2 -->
+
+    <!-- Botones -->
+
+    <TextView
+        android:id="@+id/player1ScoreText"
+        android:layout_width="362dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/black"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:text="Jugador 1: 0"
+        android:textColor="#F6F3F3"
+        android:textColorLink="#070707"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player1ThresholdText"
+        android:layout_width="340dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/player1ScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/player1ScoreText" />
+
+    <TextView
+        android:id="@+id/player2ScoreText"
+        android:layout_width="361dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/black"
+        android:text="Jugador 2: 0"
+        android:textColor="#F6F4F4"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic_launcher_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1ThresholdText" />
+
+    <TextView
+        android:id="@+id/player2ThresholdText"
+        android:layout_width="333dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="#070707"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/player2ScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/player2ScoreText" />
+
+    <TextView
+        android:id="@+id/player1CurrentScoreText"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="Jugador 1: 0"
+        android:textColor="#0C0C0C"
+        app:layout_constraintBottom_toTopOf="@+id/playButton"
+        app:layout_constraintEnd_toStartOf="@+id/player2CurrentScoreText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2ThresholdText"
+        app:layout_constraintVertical_bias="0.563"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/player2CurrentScoreText"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="Jugador 2: 0"
+        android:textColor="#020202"
+        app:layout_constraintBottom_toTopOf="@+id/passButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.995"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2ThresholdText"
+        app:layout_constraintVertical_bias="0.516"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="124dp"
+        android:background="@color/purple_200"
+        android:text="Jugar Dado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2ThresholdText" />
+
+    <Button
+        android:id="@+id/passButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:text="Pasar Turno"
+        app:layout_constraintBottom_toTopOf="@+id/restartButton"
+        app:layout_constraintEnd_toEndOf="@+id/player2CurrentScoreText"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toEndOf="@+id/playButton"
+        app:layout_constraintTop_toTopOf="@+id/playButton"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/winnerText"
+        android:layout_width="132dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="44dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:background="@color/purple_200"
+        android:text="Reiniciar Juego"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
